@@ -56,7 +56,7 @@ feature_row5:
     btn_label: "Read More"
     btn_class: "btn--primary"
 feature_row6:
-  - image_path: /assets/images/cmi-logo.jpeg
+  - image_path: /assets/images/cmi-logo.png
     alt: "placeholder image 2"
     title: "Placeholder Image Center Aligned"
     excerpt: 'This is some sample content that goes here with **Markdown** formatting. Centered with `type="center"`'
