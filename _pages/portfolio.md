@@ -101,7 +101,7 @@ are representative of my skills and interests. These projects span everything
 from mathematical physics to machine learning, from finance to advertising, from
 the theoretical to the practical.
 
-<div style="margin-bottom:1cm" align="left"><font size="5"><b>Other Activities</b></font></div>
+<div style="margin-bottom:1cm" align="left"><font size="5"><b>Selected Projects</b></font></div>
 <div class="grid__wrapper">
 {% include feature_row %}
 </div>
@@ -112,7 +112,7 @@ the theoretical to the practical.
 {% include feature_row id="feature_row8" %}
 </div>
 
-<div style="margin-bottom:1cm" align="left"><font size="5"><b>Professional Experience</b></font></div>
+<div style="margin-bottom:1cm" align="left"><font size="5"><b>Publications</b></font></div>
 
 
 <div class="grid__wrapper">
