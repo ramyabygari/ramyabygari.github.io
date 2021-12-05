@@ -52,6 +52,6 @@ the theoretical to the practical.
 
 <!------------------------------- FOOTER --------------------------------->
 
-[1]: /assets/docs/resume.pdf
+[comment]: <> ([1]: /assets/docs/resume.pdf)
 
-[2]: mailto:peter@pwills.com
+[comment]: <> ([2]: mailto:peter@pwills.com)
