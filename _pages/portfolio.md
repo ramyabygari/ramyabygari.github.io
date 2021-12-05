@@ -23,7 +23,13 @@ feature_row:
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
-
+  - image_path: assets/images/winvinaya.png
+    alt: "placeholder image 1"
+    title: " "
+    excerpt: " "
+    url: "#test-link"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 feature_row2:
   - image_path: /assets/images/razorpay.jpeg
     alt: "placeholder image 2"
@@ -72,13 +78,6 @@ feature_row7:
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - image_path: /assets/images/winvinaya.png
-    title: " "
-    excerpt: " "
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-feature_row8:
   - image_path: /assets/images/sih.jpeg
     alt: "placeholder image 2"
     title: " "
@@ -94,13 +93,6 @@ feature_row8:
     btn_class: "btn--primary"
 ---
 
-# Experience
-
-Here you'll find summaries of the major projects I've done over the years, which
-are representative of my skills and interests. These projects span everything
-from mathematical physics to machine learning, from finance to advertising, from
-the theoretical to the practical.
-
 <div style="margin-bottom:1cm" align="left"><font size="5"><b>Selected Projects</b></font></div>
 <div class="grid__wrapper">
 {% include feature_row %}
@@ -108,12 +100,8 @@ the theoretical to the practical.
 <div class="grid__wrapper">
 {% include feature_row id="feature_row7" %}
 </div>
-<div class="grid__wrapper">
-{% include feature_row id="feature_row8" %}
-</div>
 
 <div style="margin-bottom:1cm" align="left"><font size="5"><b>Publications</b></font></div>
-
 
 <div class="grid__wrapper">
 {% include feature_row id="feature_row2" type="left" %}
@@ -139,4 +127,6 @@ the theoretical to the practical.
 {% include feature_row id="feature_row6" type="left" %}
 
 </div>
+
+
 

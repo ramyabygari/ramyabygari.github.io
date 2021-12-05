@@ -23,7 +23,13 @@ feature_row:
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
-
+  - image_path: assets/images/winvinaya.png
+    alt: "placeholder image 1"
+    title: " "
+    excerpt: " "
+    url: "#test-link"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 feature_row2:
   - image_path: /assets/images/razorpay.jpeg
     alt: "placeholder image 2"
@@ -72,13 +78,6 @@ feature_row7:
     url: "#test-link"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - image_path: /assets/images/winvinaya.png
-    title: " "
-    excerpt: " "
-    url: "#test-link"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-feature_row8:
   - image_path: /assets/images/sih.jpeg
     alt: "placeholder image 2"
     title: " "
@@ -93,11 +92,6 @@ feature_row8:
     btn_label: "Read More"
     btn_class: "btn--primary"
 ---
-
-# Experience
-
-Below are the organizations I am currently associated with or have been associated in the past :
-
 
 
 <div style="margin-bottom:1cm" align="left"><font size="5"><b>Professional Experience</b></font></div>
@@ -134,7 +128,4 @@ Below are the organizations I am currently associated with or have been associat
 </div>
 <div class="grid__wrapper">
 {% include feature_row id="feature_row7" %}
-</div>
-<div class="grid__wrapper">
-{% include feature_row id="feature_row8" %}
 </div>

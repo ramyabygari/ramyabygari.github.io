@@ -10,7 +10,8 @@ permalink: /about/
 # About Me
 
 I am Ramya, currently working as a Data Scientist at Razorpay. 
-  
+  [Resume][4]
+
 [comment]: <> (I help organizations understand and leverage their quantitative)
 
 [comment]: <> (information. Call it what you will: data science, machine learning, or)
@@ -51,7 +52,7 @@ I am Ramya, currently working as a Data Scientist at Razorpay.
 
 [comment]: <> (	[Great Vow Zen Monastery][3], where we followed a daily schedule of work and)
 
-[comment]: <> (	meditation.)
+[comment]: <> (	 meditation.)
   
 [comment]: <> ([1]: mailto: peter@pwills.com)
 
@@ -59,7 +60,7 @@ I am Ramya, currently working as a Data Scientist at Razorpay.
 
 [comment]: <> ([3]: https://www.zendust.org/monastery)
 
-[comment]: <> ([4]: /assets/docs/resume.pdf)
+[4]: /assets/docs/resume.pdf
 
 [comment]: <> ([5]: https://www.entelligent.com)
 

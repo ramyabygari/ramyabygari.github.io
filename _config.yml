@@ -7,9 +7,9 @@ url: "https://ramyabygari.github.io/"
 #repository: "ramyabygari/ramyabygari.github.io"
 
 include:
-  - _pages
-  - assets
-  - index.html
+#  - _pages
+#  - assets
+#  - index.html
 exclude:
   - TODO.md
   - README.md
