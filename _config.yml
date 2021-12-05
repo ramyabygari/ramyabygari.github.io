@@ -51,7 +51,7 @@ author:
 
 
 # pagination for blog page
-paginate: 10 # number of posts to show
+#paginate: 10 # number of posts to show
 paginate_path: /page:num/
 
 # default YAML front matter
