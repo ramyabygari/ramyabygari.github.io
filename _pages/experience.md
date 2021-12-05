@@ -100,7 +100,7 @@ Below are the organizations I am currently associated with or have been associat
 
 
 
-<div style="margin-bottom:1cm" align="left"><font size="5"><b>Professional Experience</b></font></div>
+<div style="margin-bottom:1cm" align="left"><font size="5"><b>Selected Projects</b></font></div>
 
 
 <div class="grid__wrapper">
@@ -128,7 +128,7 @@ Below are the organizations I am currently associated with or have been associat
 
 </div>
 
-<div style="margin-bottom:1cm" align="left"><font size="5"><b>Other Activities</b></font></div>
+<div style="margin-bottom:1cm" align="left"><font size="5"><b>Publications</b></font></div>
 <div class="grid__wrapper">
 {% include feature_row %}
 </div>
