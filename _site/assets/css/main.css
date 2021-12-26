@@ -2553,7 +2553,7 @@ a.reversefootnote:hover { text-decoration: underline; }
 .archive__subtitle { margin: 1.414em 0 0; padding-bottom: 0.5em; font-size: 1em; color: #8e8b82; border-bottom: 1px solid #e9dcbe; }
 .archive__subtitle + .list__item .archive__item-title { margin-top: 0.5em; }
 
-.archive__item-title { margin-bottom: 0.25em; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; overflow: hidden; text-overflow: ellipsis; }
+.archive__item-title { margin-bottom: 0.25em; font-size: 0.75em; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; overflow: hidden; text-overflow: ellipsis; }
 .archive__item-title a + a { opacity: 0.5; }
 
 /* remove border*/
