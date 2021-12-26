@@ -5,6 +5,7 @@ header:
   overlay_color: "#000"
   overlay_filter: "0"
   overlay_image: /assets/images/Agumbe-2.jpeg
+  caption: "**Agumbe**"
 permalink: /portfolio/
 author_profile: true
 feature_row:

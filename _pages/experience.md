@@ -5,6 +5,7 @@ header:
   overlay_color: "#000"
   overlay_filter: "0"
   overlay_image: /assets/images/assam1.jpeg
+  caption: "**Assam**"
 permalink: /experience/
 author_profile: true
 feature_row:
