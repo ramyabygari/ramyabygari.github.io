@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/portfolio/coming/</loc>
-<lastmod>2021-12-26T19:25:14+05:30</lastmod>
+<lastmod>2021-12-26T19:50:19+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/portfolio/networks/</loc>
@@ -38,7 +38,7 @@
 </url>
 <url>
 <loc>http://localhost:4000/portfolio/social-networks/</loc>
-<lastmod>2021-12-26T19:25:14+05:30</lastmod>
+<lastmod>2021-12-26T19:50:19+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>
@@ -50,7 +50,7 @@
 <loc>http://localhost:4000/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/_pages/portfolio.html</loc>
+<loc>http://localhost:4000/portfolio/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/assets/docs/resume.pdf</loc>

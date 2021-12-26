@@ -12,8 +12,7 @@ feature_row:
 feature_row9:
   - image_path: /assets/images/breastcancer-final.jpeg
     title: Breast Cancer Treatment
-    excerpt:  Developed an ML system with a customized loss function to handle dataset imbalance and proposed a modified
-    LadderNet architecture for intermediate segmentation.
+    excerpt:  Developed an end-end ML system, consisting of classification and segmentation, of immunohistopathological images
     url: "https://github.com/ramyabygari/Breast-Cancer-Treatment"
     btn_label: "Github Link"
     btn_class: "btn--inverse"
@@ -21,8 +20,7 @@ feature_row9:
 
   - image_path: /assets/images/diabetic.jpeg
     title: Blindness Severity Detection
-    excerpt: Developed a system consisting CNNs and EfficientNet to weigh the granular details of an image. This system achieved an accuracy of
-94.80%.
+    excerpt: Developed a system consisting CNNs and EfficientNet to weigh the granular details of an image. This system achieved an accuracy of 94.80%.
     url: "https://github.com/ramyabygari/Diabetic-Retinopathy"
     btn_label: "Github Link"
     btn_class: "btn--inverse"
