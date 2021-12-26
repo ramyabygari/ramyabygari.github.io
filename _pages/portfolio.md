@@ -71,7 +71,7 @@ feature_row12:
   - image_path: /assets/images/cdc.jpeg
     excerpt: <b>Core Placement Coordinator</b>
 feature_row13:
-  - image_path: /assets/images/bigdata.jpeg
+  - image_path: /assets/images/bigdata.png
     title : IEEE Big Data Conference 2021 
     excerpt: An AI-powered Smart Routing Solution for Payment Systems <b>(Accepted, Short Paper)</b>
     url: "https://arxiv.org/abs/2111.00783"
@@ -107,7 +107,7 @@ feature_row14:
     btn_label: "Preprint link"
     btn_class: "btn--inverse"
 ---
-
+Scroll for publications!
 
 
 <div style="margin-bottom:1cm" align="left"><font size="5"><b>Selected Projects</b></font></div>
