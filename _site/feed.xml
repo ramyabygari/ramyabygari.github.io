@@ -1,1 +1,201 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-27T00:36:44+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ramya Bygari</title><author><name>Ramya Bygari</name><email>ramyabygari239@gmail.com</email></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-27T02:26:18+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Ramya Bygari</title><author><name>Ramya Bygari</name><email>ramyabygari239@gmail.com</email></author><entry><title type="html">Types as Propositions</title><link href="http://localhost:4000/posts/2018/11/30/types.html" rel="alternate" type="text/html" title="Types as Propositions" /><published>2018-11-30T00:00:00+05:30</published><updated>2018-11-30T00:00:00+05:30</updated><id>http://localhost:4000/posts/2018/11/30/types</id><content type="html" xml:base="http://localhost:4000/posts/2018/11/30/types.html">&lt;p&gt;Some of the most meaningful mathematical realizations that I’ve had have been
+unexpected connections between two topics; that is, realizing that two concepts
+that first appeared quite distinct are in fact one and the same. In our first
+linear algebra courses, we learn that manipulations of matrices is, in fact,
+equivalent to solving systems of equations. In quantum mechanics, we see that
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Observable&quot;&gt;physically observable quantities&lt;/a&gt; are, mathematically speaking, linear
+operators (I still don’t quite grok this one). And, my personal favorite
+example, we learn in functional analysis that the linear functionals in the dual
+space of a Hilbert space are themselves in perfect correspondence with the
+functions in the original space.&lt;sup id=&quot;fnref:fnote1&quot;&gt;&lt;a href=&quot;#fn:fnote1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;Recently, I’ve stumbled upon another such result, which has captured my
+attention for a while. The result, often referred to as Curry-Howard
+correspondence, is the statement that propositions in a formal logical system
+are equivalent to types in the simply typed lambda calculus. Loosely, this means
+that &lt;strong&gt;logical statements are equivalent to data types&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;p&gt;Let’s unpack that a bit; “propositions” are just statements in a logical
+system.&lt;sup id=&quot;fnref:fnote15&quot;&gt;&lt;a href=&quot;#fn:fnote15&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; In mathematics, for example, one might put forward the
+proposition “no even numbers are prime,” or “14 is greater than 18”. Note that
+propositions need not be &lt;em&gt;true&lt;/em&gt;; in fact, some logical systems support
+propositions that cannot even be determined to be true or false.&lt;sup id=&quot;fnref:fnote2&quot;&gt;&lt;a href=&quot;#fn:fnote2&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;
+“Types” can be though of as types in a computing language; &lt;code class=&quot;highlighter-rouge&quot;&gt;Integer&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Boolean&lt;/code&gt;,
+and so on. We will have much more to say about types as we move forward, but for
+now, hold in your mind the conventional notion of types as defined in a language
+such as Java or Python (or better yet, Haskell).&lt;/p&gt;
+
+&lt;p&gt;How on earth could these two be in correspondence? On the surface, they appear
+entirely separate concepts. In this post, I’ll spend some time unpacking what
+this equivalence is actually saying, using a simple example. I am far from a
+full understanding of it, but as usual, I write about it in the hopes that I’ll
+be forced to clarify what I &lt;em&gt;do&lt;/em&gt; understand, or even better, be corrected by
+someone more knowledgable than myself.&lt;/p&gt;
+
+&lt;p&gt;Speaking of those more knowledgable than myself, there are various resources
+online that I found very helpful in understanding the correspondence:
+&lt;a href=&quot;https://www.youtube.com/watch?v=IOiZatlZtGU&amp;amp;t=1176s&quot;&gt;Philip Wadler’s talk&lt;/a&gt; on the subject is a great starting point, and there
+are a number of &lt;a href=&quot;http://lambda-the-ultimate.org/node/1532&quot;&gt;useful&lt;/a&gt; &lt;a href=&quot;https://stackoverflow.com/questions/2969140/what-are-the-most-interesting-equivalences-arising-from-the-curry-howard-isomorp&quot;&gt;discussions&lt;/a&gt; &lt;a href=&quot;https://stackoverflow.com/questions/2829347/a-question-about-logic-and-the-curry-howard-correspondence&quot;&gt;available&lt;/a&gt; on StackExchange and
+various functional programming forums.&lt;/p&gt;
+
+&lt;h2 id=&quot;an-example&quot;&gt;An Example&lt;/h2&gt;
+
+&lt;p&gt;I was confused by the idea of propositions as types when I first encountered it,
+and after learning more, I believe that the root of my confusion lies in the
+fact that types such as &lt;code class=&quot;highlighter-rouge&quot;&gt;Integer&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Boolean&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;, which we are
+familiar with from programming, correspond to very trivial propositions, making
+them poor examples. We’ll have to introduce something a bit fancier; a
+&lt;em&gt;conditional type&lt;/em&gt;. For example, &lt;code class=&quot;highlighter-rouge&quot;&gt;OddInt&lt;/code&gt; might be odd Integers, and &lt;code class=&quot;highlighter-rouge&quot;&gt;PrimeInt&lt;/code&gt;
+might be prime integers. We’ll approximate these conditional types with custom
+classes in Scala. Classes and types are &lt;a href=&quot;https://stackoverflow.com/questions/5031640/what-is-the-difference-between-a-class-and-a-type-in-scala-and-java&quot;&gt;different beasts&lt;/a&gt;, of course, but
+we will ignore that distinction in this post.&lt;sup id=&quot;fnref:fnote3&quot;&gt;&lt;a href=&quot;#fn:fnote3&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s consider one conditional type in particular: &lt;code class=&quot;highlighter-rouge&quot;&gt;BigInteger&lt;/code&gt;. This type
+(actually a class in this example) is defined as follows:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scala&quot; data-lang=&quot;scala&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BigInteger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LOWER_BOUND&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LOWER_BOUND&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Too small!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toString&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;BigInteger($value)&quot;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;One could then instantiate a &lt;code class=&quot;highlighter-rouge&quot;&gt;BigInteger&lt;/code&gt; as follows:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scala&quot; data-lang=&quot;scala&quot;&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;big&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BigInteger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10001&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// res0: BigInteger(10001)
+&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;small&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BigInteger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Too&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;small!&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now the fundemanetal question: what proposition corresponds to this type?  In
+simple scenarios like this, the corresponding proposition is that the type can
+be &lt;em&gt;inhabited&lt;/em&gt;; that is, there exists a value that satisfies that type. For
+example, the type &lt;code class=&quot;highlighter-rouge&quot;&gt;BigInteger&lt;/code&gt; corresponds to the claim “there exists an integer
+\(i\) for which \( i &amp;gt; 10,000 \)”. Obviously, such an integer exists, and the
+fact that we can instantiate this type indicates that it corresponds to a true
+proposition. Alternatively, consider a type &lt;code class=&quot;highlighter-rouge&quot;&gt;WeirdInteger&lt;/code&gt;, which is an integer
+satisfying &lt;code class=&quot;highlighter-rouge&quot;&gt;i &amp;lt; 3 &amp;amp;&amp;amp; i &amp;gt; 5&lt;/code&gt;. We can define the type well enough, but there are
+no values which satisfy it; it is an uninhabitable type, and so corresponds to a
+false proposition.&lt;/p&gt;
+
+&lt;h2 id=&quot;functions-and-implication&quot;&gt;Functions and Implication&lt;/h2&gt;
+
+&lt;p&gt;Let’s make things a little more interesting. In programming languages, there are
+not only primitive types like &lt;code class=&quot;highlighter-rouge&quot;&gt;Integer&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Boolean&lt;/code&gt;, but there are also
+&lt;strong&gt;function types&lt;/strong&gt;, which are the types of functions. For example, in Scala, the
+function &lt;code class=&quot;highlighter-rouge&quot;&gt;def f(x: Int) = x.toString&lt;/code&gt; has type &lt;code class=&quot;highlighter-rouge&quot;&gt;Int =&amp;gt; String&lt;/code&gt;, which is to say
+it is a function that maps integers to strings.&lt;/p&gt;
+
+&lt;p&gt;What sort of propositions would &lt;em&gt;functions&lt;/em&gt; correspond to? It turns out that
+functions naturally map to &lt;em&gt;implication&lt;/em&gt;. In some ways, the correspondence here
+is very natural. Consider the conditional type &lt;code class=&quot;highlighter-rouge&quot;&gt;BigInteger&lt;/code&gt;, and the conditional
+type &lt;code class=&quot;highlighter-rouge&quot;&gt;BiggerInteger&lt;/code&gt;. The definition of the latter should look familiar, from
+above:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scala&quot; data-lang=&quot;scala&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BiggerInteger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;val&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LOWER_BOUND&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20000&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LOWER_BOUND&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Too small!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;toString&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;BiggerInteger($value)&quot;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Now, we can write a function that maps &lt;code class=&quot;highlighter-rouge&quot;&gt;BigInteger&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;BiggerInteger&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scala&quot; data-lang=&quot;scala&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;makeBigger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;BigInteger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;BiggerInteger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BiggerInteger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Recall that the proposition corresponding to the type &lt;code class=&quot;highlighter-rouge&quot;&gt;BigInteger&lt;/code&gt; is the
+statement “there exists an integer greater than 10,000”, and the proposition
+corresponding to &lt;code class=&quot;highlighter-rouge&quot;&gt;Bigger&lt;/code&gt; is the statement “there exists an integer greater than
+20,000”; the proposition corresponding to the function type &lt;code class=&quot;highlighter-rouge&quot;&gt;BigInteger =&amp;gt;
+BiggerInteger&lt;/code&gt; is then just the statement “the existence of an integer above
+10,000 implies the existence of an integer above 20,000”. And note that, as it
+should be for an implication, we do not care whether there actually &lt;em&gt;does&lt;/em&gt; exist
+an integer above 10,000; we simply know that &lt;em&gt;if&lt;/em&gt; one exists, then its existence
+implies the existence of an integer above 20,000.&lt;/p&gt;
+
+&lt;p&gt;To be a bit more explicit, the function that we wrote above can be thought of as
+a &lt;strong&gt;proof&lt;/strong&gt; of the implication; in particular, if we suppose that there exists
+an \(i\) such that \(i &amp;gt; 10,000\), then clearly \(2i &amp;gt; 20,000\), and so
+if we let \(j=2i\), then we have proven the existence of a \(j\) such that
+\(j &amp;gt; 20,000\). This is what the theoretical computer scientists mean when
+they say that “programs are proofs”.&lt;/p&gt;
+
+&lt;p&gt;Of course, Scala is not a proof-checking language, and cannot tell during
+compilation that the function &lt;code class=&quot;highlighter-rouge&quot;&gt;makeBigger&lt;/code&gt; is valid; we would need a much richer
+type system to be able to validate such functions. Consider that the following
+function compiles with no problem, although there are no input values for which
+it will not throw a (runtime) exception:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scala&quot; data-lang=&quot;scala&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wonky&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;BigInteger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;BiggerInteger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BiggerInteger&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;wait-what&quot;&gt;Wait… what?&lt;/h3&gt;
+
+&lt;p&gt;If you think about it a bit more, it’s sort of a weird example; you
+could map &lt;em&gt;any&lt;/em&gt; type to &lt;code class=&quot;highlighter-rouge&quot;&gt;BiggerInteger&lt;/code&gt;, just by doing &lt;code class=&quot;highlighter-rouge&quot;&gt;def f[A](a:A):
+BiggerInteger = new BiggerInteger(20001)&lt;/code&gt;. This is because the proposition that
+corresponds to &lt;code class=&quot;highlighter-rouge&quot;&gt;BiggerInteger&lt;/code&gt; is true (the type is inhabitable), and if B is
+true, then A implies B for any A at all.&lt;/p&gt;
+
+&lt;p&gt;Common languages such as Haskell only express very trivial propositions with
+their types; there does exist one uninhabitable type (&lt;code class=&quot;highlighter-rouge&quot;&gt;void&lt;/code&gt;), but I have not
+found much use for it in practice. The benefit of using conditional types for
+these examples is that we can explore at least some types which have
+corresponding &lt;em&gt;false&lt;/em&gt; propositions, such as &lt;code class=&quot;highlighter-rouge&quot;&gt;WeirdInteger&lt;/code&gt;, which are integers
+&lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; which satisfy &lt;code class=&quot;highlighter-rouge&quot;&gt;i &amp;lt; 3 &amp;amp;&amp;amp; i &amp;gt; 5&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;in-conclusion&quot;&gt;In Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Seeing all this, you can begin to get a sense of how computer-assisted proof
+techniques might arise out of it. If the fact that a program compiles is
+equivalent to the truth the corrsponding proposition, then all we need is a
+language with a rich enough type system to express interesting
+statements. Examples of languages used in this way include &lt;a href=&quot;https://coq.inria.fr/&quot;&gt;Coq&lt;/a&gt; and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Agda_(programming_language&quot;&gt;Agda&lt;/a&gt;. A thorough discussion of such languages is beyond both the scope of
+this post and my understanding.&lt;/p&gt;
+
+&lt;p&gt;I think what keeps me interested in this subject is that it still remains quite
+opaque to me; I’ve struggled to even come up with these simple (and flawed)
+examples of how Curry-Howard correspondence plays out in practice. I hope that
+anyone reading this who understand the subject better than I do will leave a
+detailed list of my misunderstandings, so that I can better grasp this
+mysterious and fascinating topic.&lt;/p&gt;
+
+&lt;!-------------------------------- FOOTER ----------------------------&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:fnote1&quot;&gt;
+      &lt;p&gt;This statement is difficult to understand without background in
+functional analysis, but it is in fact one of the most beautiful examples of
+such an equivalence result. &lt;a href=&quot;#fnref:fnote1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:fnote15&quot;&gt;
+      &lt;p&gt;I’m being a bit sloppy here. The type of logic we’re talking about
+here is not classical logic, but rather in the sense of &lt;a href=&quot;https://en.wikipedia.org/wiki/Natural_deduction&quot;&gt;natural deduction&lt;/a&gt;. &lt;a href=&quot;#fnref:fnote15&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:fnote2&quot;&gt;
+      &lt;p&gt;Such systems are called undecidable; see
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Decidability_(logic)&quot;&gt;the wiki entry on decidability&lt;/a&gt; for more information. &lt;a href=&quot;#fnref:fnote2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:fnote3&quot;&gt;
+      &lt;p&gt;We won’t be careful about whether the idea of conditional types
+presented here corresponds well with conditional types as they are actually
+implemented in programming languages such as &lt;a href=&quot;https://github.com/Microsoft/TypeScript/pull/21316&quot;&gt;Typescript&lt;/a&gt;. &lt;a href=&quot;#fnref:fnote3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Ramya Bygari</name><email>ramyabygari239@gmail.com</email></author><category term="posts" /><summary type="html">What is the connection between data types and logical propositions? Surprisingly, it runs quite deep. This post explores and illuminates that link.</summary></entry><entry><title type="html">Anomaly Detection in Dynamic Networks</title><link href="http://localhost:4000/posts/2017/09/09/dynamic.html" rel="alternate" type="text/html" title="Anomaly Detection in Dynamic Networks" /><published>2017-09-09T00:00:00+05:30</published><updated>2017-09-09T00:00:00+05:30</updated><id>http://localhost:4000/posts/2017/09/09/dynamic</id><content type="html" xml:base="http://localhost:4000/posts/2017/09/09/dynamic.html">&lt;p&gt;“Data analysis” is a hugely popular thing these days, for obvious reasons. When
+most people think of “data,” they think of a table where the columns are
+variables and the rows are observations…&lt;/p&gt;</content><author><name>Ramya Bygari</name><email>ramyabygari239@gmail.com</email></author><category term="posts" /><summary type="html">An exploration of various methods for answering the question: how much has this network changed since we last looked at it?</summary></entry></feed>

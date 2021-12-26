@@ -74,6 +74,7 @@ defaults:
       toc_label: "Contents"
       read_time: false
       comments: true
+      future: true
 
 
 # collections

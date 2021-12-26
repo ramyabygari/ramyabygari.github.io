@@ -1,7 +1,7 @@
 ---
 
 header:
-  overlay_image: /assets/images/Agumbe-2.jpeg
+  overlay_image: /assets/images/agumbe.jpeg
   caption: "**Agumbe**"
   
 permalink: /about/
