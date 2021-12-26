@@ -12,24 +12,6 @@ var idx = lunr(function () {
   
     
     
-      this.add({
-          title: "Anomaly Detection in Dynamic Networks",
-          excerpt: "“Data analysis” is a hugely popular thing these days, for obvious reasons. When most people think of “data,” they think...",
-          categories: ["posts"],
-          tags: [],
-          id: 0
-      })
-      
-    
-      this.add({
-          title: "Types as Propositions",
-          excerpt: "Some of the most meaningful mathematical realizations that I’ve had have been unexpected connections between two topics; that is, realizing...",
-          categories: ["posts"],
-          tags: [],
-          id: 1
-      })
-      
-    
   
 });
 
@@ -43,28 +25,6 @@ var store = [
   
     
     
-    
-      
-      {
-        "title": "Anomaly Detection in Dynamic Networks",
-        "url": "http://localhost:4000/posts/2017/09/09/dynamic.html",
-        "excerpt": "“Data analysis” is a hugely popular thing these days, for obvious reasons. When most people think of “data,” they think...",
-        "teaser":
-          
-            null
-          
-      },
-    
-      
-      {
-        "title": "Types as Propositions",
-        "url": "http://localhost:4000/posts/2018/11/30/types.html",
-        "excerpt": "Some of the most meaningful mathematical realizations that I’ve had have been unexpected connections between two topics; that is, realizing...",
-        "teaser":
-          
-            null
-          
-      }
     
   ]
 
