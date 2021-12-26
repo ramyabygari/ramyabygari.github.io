@@ -96,14 +96,14 @@ feature_row13:
 feature_row14:
   
   - image_path: /assets/images/patent.png
-    title: System and method for assisting students with graduate applications
-    excerpt: Indian Provisional Patent <b>(Accepted)</b>
+    title: Indian Provisional Patent
+    excerpt: System and method for assisting students with graduate applications <b>(Accepted)</b>
     url: "https://docs.google.com/document/d/1-EW9njPxC2RVtX7_YuXlK9pp5cNM1_MXL9_ut9ZOlpY/edit?usp=sharing"
     btn_label: "Patent doc"
     btn_class: "btn--inverse"
   - image_path: /assets/images/jtehm.png
-    title: Automated Molecular Subtyping of Breast Carcinoma 
-    excerpt: IEEE JTEHM <b>(Under Review, Journal)</b>
+    title: IEEE JTEHM
+    excerpt: Automated Molecular Subtyping of Breast Carcinoma <b>(Under Review, Journal)</b>
     url: "https://drive.google.com/file/d/1wytdYpPUqjDbJwEYbRCFZCPwEFVmt94Z/view"
     btn_label: "Preprint link"
     btn_class: "btn--inverse"
