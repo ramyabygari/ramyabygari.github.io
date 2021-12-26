@@ -5,13 +5,12 @@ header:
   overlay_color: "#000"
   overlay_filter: "0"
   overlay_image: /assets/images/assam2.jpeg
-  caption: "Photo credit: **Rachita Naik**"
 permalink: /portfolio/
 author_profile: true
 feature_row:
   - image_path: assets/images/odsc.png
     alt: "placeholder image 1"
-    title: " "
+    title: "Data Scientist"
     excerpt: " "
     url: "#test-link"
     btn_label: "Read More"

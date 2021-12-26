@@ -64,10 +64,11 @@
 }
 
 .archive__item-teaser {
-  border-radius: $border-radius;
+   border-radius: $border-radius;
   overflow: hidden;
   img {
-    width: 100%;
+    width: 250px;
+    height: 200px;
   }
 }
 
@@ -186,7 +187,7 @@
     }
 
     @include breakpoint($medium) {
-      max-height: 120px;
+      max-height: 200px;
     }
   }
 }
@@ -248,13 +249,13 @@
 
       .archive__item-teaser {
         float: left;
-        width: span(5 of 12);
+        width: 175px;
       }
 
       .archive__item-body {
         float: right;
-        padding-left: gutter(0.5 of 12);
-        padding-right: gutter(1 of 12);
+        padding-left: -50px;
+        padding-right: -10px;
         width: span(7 of 12);
       }
     }

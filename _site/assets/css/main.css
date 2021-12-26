@@ -2563,7 +2563,7 @@ a.reversefootnote:hover { text-decoration: underline; }
 .archive__item-excerpt + p { text-indent: 0; }
 
 .archive__item-teaser { border-radius: 4px; overflow: hidden; }
-.archive__item-teaser img { width: 100%; }
+.archive__item-teaser img { width: 250px; height: 200px; }
 
 .archive__item:hover .archive__item-teaser { box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); }
 .archive__item:hover .archive__item-title { text-decoration: underline; }
@@ -2591,7 +2591,7 @@ a.reversefootnote:hover { text-decoration: underline; }
 .grid__item .archive__item-excerpt { display: none; }
 @media (min-width: 48em) { .grid__item .archive__item-excerpt { display: block; font-size: 0.75em; } }
 @media (min-width: 37.5em) { .grid__item .archive__item-teaser { max-height: 200px; } }
-@media (min-width: 48em) { .grid__item .archive__item-teaser { max-height: 120px; } }
+@media (min-width: 48em) { .grid__item .archive__item-teaser { max-height: 200px; } }
 
 /* Features ========================================================================== */
 .feature__wrapper { clear: both; margin-bottom: 2em; border-bottom: 1px solid #e9dcbe; }
@@ -2605,8 +2605,8 @@ a.reversefootnote:hover { text-decoration: underline; }
   .feature__item .feature__item-teaser { max-height: 200px; overflow: hidden; } }
 .feature__item--left { float: left; margin-left: 0; margin-right: 0; width: 100%; clear: both; font-size: 1.25rem; }
 .feature__item--left .archive__item-teaser { margin-bottom: 2em; }
-@media (min-width: 37.5em) { .feature__item--left .archive__item-teaser { float: left; width: 40.6779661017%; }
-  .feature__item--left .archive__item-body { float: right; padding-left: 1.6949152542%; padding-right: 1.6949152542%; width: 57.6271186441%; } }
+@media (min-width: 37.5em) { .feature__item--left .archive__item-teaser { float: left; width: 175px; }
+  .feature__item--left .archive__item-body { float: right; padding-left: -50px; padding-right: -10px; width: 57.6271186441%; } }
 .feature__item--right { float: left; margin-left: 0; margin-right: 0; width: 100%; clear: both; font-size: 1.25rem; }
 .feature__item--right .archive__item-teaser { margin-bottom: 2em; }
 @media (min-width: 37.5em) { .feature__item--right { text-align: right; }
