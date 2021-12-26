@@ -1,68 +1,56 @@
 ---
-title: " "
+
 header:
   overlay_image: /assets/images/Agumbe-2.jpeg
-  caption: "Photo Credit: **Agumbe**"
+  caption: "**Agumbe**"
   
 permalink: /about/
+
+feature_row:
+
+feature_row9:
+  - image_path: /assets/images/rose1.jpeg 
+
+
+
+  - image_path: /assets/images/rose5.jpeg
+
+
+
+  - image_path: /assets/images/rose3.jpeg
+ 
 ---
 
 # About Me
 
-I am Ramya, currently working as a Data Scientist at Razorpay. 
+I am Ramya, working as a Data Scientist at [Razorpay][1] (unicorn startup in India).
+I am also a research collaborator at [PathCheck][2] (checkout [covid-news.org][3]!),
+an MIT Media lab Spin-Off and a research volunteer at University of Cambridge.
+I  completed my Bachelor’s in Computer Science at the [National Institute Of Technology Karnataka, Surathkal][4], in 2020.
+
+My main research interests  are machine learning and building scalable systems for ML (checkout my [github][5]).
+
+I like gardening in my free time! A few roses below :)
+
+
+<div class="grid__wrapper">
+{% include feature_row id="feature_row9" %}
+</div>
+
+
+
+
   
-[comment]: <> (I help organizations understand and leverage their quantitative)
+[1]: https://razorpay.com/
 
-[comment]: <> (information. Call it what you will: data science, machine learning, or)
+[2]: https://www.pathcheck.org/
 
-[comment]: <> (statistics; the modern technological world lies at the intersection of)
+[3]: http://covid-news.org/
 
-[comment]: <> (mathematics and computing, and that's where I like to play.)
+[4]: https://www.nitk.ac.in/
 
-[comment]: <> (I've worked with [Stage 1 start-ups][5] and [publicly traded corporations][6],)
+[5]: https://github.com/ramyabygari
 
-[comment]: <> (building models, establishing codebases, and providing mathematical expertise to)
+[6]: https://www.thetradedesk.com
 
-[comment]: <> (developers. My mother tongue is Python, but I also speak Scala and Java. I have)
-
-[comment]: <> (experience working with Apache Spark, scikit-learn, Tensorflow, pandas, and many)
-
-[comment]: <> (other popular data analysis and machine learning libraries.)
-
-[comment]: <> (I have a bachelors degree in Computer Science from Reed College, where I did)
-
-[comment]: <> (my thesis on breast cancer treatment planning using deep learning. After)
-
-[comment]: <> (spending some time pursuing other interests,[^fnote2] I began working on my)
-
-[comment]: <> (Ph.D. in Applied Mathematics at University of Colorado. My dissertation covers a)
-
-[comment]: <> (range of topics in statistics, data analytics, and understanding noisy)
-
-[comment]: <> (systems. For more details on all that, check out [my portfolio]&#40;/portfolio/&#41;, or)
-
-[comment]: <> (take a look at [my resume][4]. )
-
-[comment]: <> (I currently live in San Francisco, where I work as a data scientist with the)
-
-[comment]: <> (inventory optimization team at [Stitch Fix][7].)
-
-[comment]: <> ([^fnote2]: After graduating from Reed, I spent some time living at)
-
-[comment]: <> (	[Great Vow Zen Monastery][3], where we followed a daily schedule of work and)
-
-[comment]: <> (	meditation.)
-  
-[comment]: <> ([1]: mailto: peter@pwills.com)
-
-[comment]: <> ([2]: /assets/docs/thesis.pdf)
-
-[comment]: <> ([3]: https://www.zendust.org/monastery)
-
-[comment]: <> ([4]: /assets/docs/resume.pdf)
-
-[comment]: <> ([5]: https://www.entelligent.com)
-
-[comment]: <> ([6]: https://www.thetradedesk.com)
-
-[comment]: <> ([7]: https://multithreaded.stitchfix.com/algorithms/)
+[7]: https://multithreaded.stitchfix.com/algorithms/
