@@ -94,12 +94,7 @@ feature_row8:
     btn_class: "btn--primary"
 ---
 
-# Experience
 
-Here you'll find summaries of the major projects I've done over the years, which
-are representative of my skills and interests. These projects span everything
-from mathematical physics to machine learning, from finance to advertising, from
-the theoretical to the practical.
 
 <div style="margin-bottom:1cm" align="left"><font size="5"><b>Selected Projects</b></font></div>
 <div class="grid__wrapper">
