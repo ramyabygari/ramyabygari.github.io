@@ -21,7 +21,7 @@ feature_row9:
 
   - image_path: /assets/images/diabetic.jpeg
     title: Blindness Severity Detection
-    excerpt: Developed a system consisting CNNs and EfficientNet to detect blindness caused due to Diabetic Retionpathy. This system achieved an accuracy of 94.80%.
+    excerpt: Developed a system consisting CNNs and EfficientNet to detect blindness caused due to Diabetic Retinopathy. This system achieved an accuracy of 94.80%.
     url: "https://github.com/ramyabygari/Diabetic-Retinopathy"
     btn_label: "Github Link"
     btn_class: "btn--inverse"
