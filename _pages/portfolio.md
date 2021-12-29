@@ -104,7 +104,7 @@ feature_row14:
   - image_path: /assets/images/jtehm.png
     title: IEEE JTEHM
     excerpt: Automated Molecular Subtyping of Breast Carcinoma <b>(Under Review, Journal)</b>
-    url: "https://drive.google.com/file/d/1wytdYpPUqjDbJwEYbRCFZCPwEFVmt94Z/view"
+    url: "https://drive.google.com/file/d/1hLIQdkPGGRLlMXVW2TakeVg_FoNxFIIH/view?usp=sharing"
     btn_label: "Preprint Link"
     btn_class: "btn--inverse"
 ---
