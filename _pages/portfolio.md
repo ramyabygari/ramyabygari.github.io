@@ -75,7 +75,7 @@ feature_row13:
   - image_path: /assets/images/bigdata.png
     title : IEEE Big Data Conference 2021 
     excerpt: An AI-powered Smart Routing Solution for Payment Systems <b>(Accepted, Short Paper)</b>
-    url: "https://arxiv.org/abs/2111.00783"
+    url: "https://ieeexplore.ieee.org/document/9671961"
     btn_label: "Preprint Link"
     btn_class: "btn--inverse"
 
