@@ -23,7 +23,7 @@ feature_row9:
 
 # About Me
 
-I am Ramya, working as a Data Scientist at [Razorpay][1] (unicorn startup in India).
+I am Ramya, a Masters student at the Computer Science Department in [University Of Illinois Urbana Champaign] [6] (UIUC). Proir to joining UIUC, I worked as a Data Scientist at [Razorpay][1] (unicorn startup in India).
 I am also a research collaborator at [PathCheck][2] (checkout [covid-news.org][3]!),
 an MIT Media lab Spin-Off and a research volunteer at University of Cambridge.
 I  completed my Bachelor’s in Computer Science at the [National Institute Of Technology Karnataka, Surathkal][4], in 2020.
@@ -51,6 +51,7 @@ I like gardening in my free time! A few roses below :)
 
 [5]: https://github.com/ramyabygari
 
-[6]: https://www.thetradedesk.com
+[6]: https://illinois.edu/
 
-[7]: https://multithreaded.stitchfix.com/algorithms/
+
+
