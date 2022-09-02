@@ -12,7 +12,7 @@ feature_row:
 
 feature_row9:
   - image_path: /assets/images/razorpay.jpeg 
-    excerpt: <b>Data Scientist</b>, Aug'20 - Present
+    excerpt: <b>Data Scientist</b>, Aug'20 - Jul'22
 
 
   - image_path: /assets/images/pathcheck.png
