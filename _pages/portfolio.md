@@ -89,8 +89,8 @@ feature_row13:
   - image_path: /assets/images/Mind.png
     title: IEEE MIND 2021
     excerpt: Blindness (Diabetic Retinopathy) Severity Scale Detection <b>(Accepted, Full Paper)</b>
-    url: "https://drive.google.com/file/d/1HPD2mkISl8GYMvL0WExg9w7K1lFIfoSi/view"
-    btn_label: "Preprint Link"
+    url: "https://link.springer.com/chapter/10.1007/978-981-19-5868-7_21"
+    btn_label: "Paper Link"
     btn_class: "btn--inverse"
 
 feature_row14:
