@@ -23,12 +23,12 @@ feature_row9:
 
 # About Me
 
-I am Ramya, a Masters student at the Computer Science Department in [University Of Illinois Urbana Champaign] [6] (UIUC). Proir to joining UIUC, I worked as a Data Scientist at [Razorpay][1] (unicorn startup in India).
+I am Ramya, a Masters student at the Computer Science Department in [University Of Illinois Urbana Champaign] [6] (UIUC). Proir to joining UIUC, I worked as a Software Development Engineer at [Razorpay][1] (unicorn startup in India).
 I am also a research collaborator at [PathCheck][2] (checkout [covid-news.org][3]!),
 an MIT Media lab Spin-Off and a research volunteer at University of Cambridge.
 I  completed my Bachelor’s in Computer Science at the [National Institute Of Technology Karnataka, Surathkal][4], in 2020.
 
-My main research interests  are machine learning and building scalable systems for ML (checkout my [github][5]).
+My main research interests are distributed systems storage and systems for ML (checkout my [github][5]).
 
 I like gardening in my free time! A few roses below :)
 
