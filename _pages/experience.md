@@ -12,7 +12,7 @@ feature_row:
 
 feature_row9:
   - image_path: /assets/images/razorpay.jpeg 
-    excerpt: <b>Software Development Engineer</b>, Aug'20 - Jul'22
+    excerpt: <b>Software Development Engineer</b>, Aug'20 - Aug'22
 
 
   - image_path: /assets/images/pathcheck.png
