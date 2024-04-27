@@ -23,17 +23,12 @@ feature_row9:
 
 # About Me
 
-My academic and professional journey has revolved around my fervent interest in designing and building robust distributed systems, versatile general-purpose computing solutions, and efficient storage systems. I am pursuing a Master of Science degree in Computer Science at the University of Illinois Urbana-Champaign, with a strong focus on Distributed Systems, Cloud Storage Systems, and Fault-Tolerant Consistent DataCenter Systems. Simultaneously, my independent research has been dedicated to advancing distributed systems, particularly in the context of Graph Neural Networks (GNNs), reflecting my commitment to exploring these dynamic fields.
+I am pursuing a Master of Science degree in Computer Science at the University of Illinois Urbana-Champaign, with a focus on Distributed Systems, Cloud Storage Systems. 
 
-Outside of academia, my internship experience at Omnistrate was instrumental in honing my practical skills. There, I engineered a dynamic horizontal autoscaling feature capable of adaptively managing CPU and memory allocation to optimize resource utilization and scalability in multi-tenant environments. This feature accommodated a diverse range of applications, from multiple writers to coupled/serverless architectures, and stateless/stateful apps. 
+Outside of academia, my internship experience at Omnistrate. There, I engineered a dynamic horizontal autoscaling feature capable of adaptively managing CPU and memory allocation to optimize resource utilization and scalability in multi-tenant environments. This feature accommodated a diverse range of applications, from multiple writers to coupled/serverless architectures, and stateless/stateful apps. 
 
-During my two-year tenure as a Software Engineer at Razorpay [1], I further solidified my ability to tackle real-world challenges. I led a transformative initiative that evolved a conventional batch processing system into a scalable stream processing ML system powered by Spark and Kafka. 
+During my two-year tenure as a Software Engineer at Razorpay [1], I led an initiative that evolved a conventional batch processing system into a scalable stream processing ML system powered by Spark and Kafka. 
 Furthermore, I built a pipeline to scale the transactions to be handled from 0.5 million to a million transactions per second, thereby significantly improving Razorpay’s revenue.The result was not only enhanced success rates and user engagement but also a significant reduction in product gaps, underscoring my ability to address tangible real-world challenges in general-purpose computing and data processing. 
-
-My experiences at Omnistrate and Razorpay also underscore the critical role of storage systems in supporting data-intensive applications. These insights from the professional realm seamlessly complement my academic pursuits and resonate with my commitment to innovating within the domains of distributed systems and storage solutions.
-My passion for innovation finds expression in my personal projects, with the ongoing "Distributed Serverless GNN Training Framework System" as a prime example. This project harnesses the power of serverless computing to adeptly tackle issues associated with memory constraints and the exorbitant costs linked to GPUs in GNN training. Furthermore, my active contributions to projects like "Exploiting Nil Externality in message queues" and "Syros - Read Optimized Consensus Protocol" serve as vivid demonstrations of my unwavering dedication to pushing the boundaries of technological solutions within the dynamic realm of distributed systems.
-
-In summary, my overarching career goal is to continue contributing my skills and fervor to the design and development of cutting-edge distributed systems, versatile storage solutions, and high-performance general-purpose computing solutions, solving challenging problems related to scalability, consensus, storage, memory, and fault tolerance. These areas closely align with my core interests and areas of expertise. 
 
 
 I like gardening in my free time! A few roses below :)
